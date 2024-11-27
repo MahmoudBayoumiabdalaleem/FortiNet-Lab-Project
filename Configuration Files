@@ -19,3 +19,18 @@ config firewall policy
         set nat enable
     next
 end
+config system interface
+    edit "port2"
+        set ip 10.200.4.1 255.255.255.0
+    next
+end
+
+config firewall policy
+    edit 1
+        set name "Allow Remote to Local"
+        set srcintf "port2"
+        set dstintf "port3"
+        set action accept
+    next
+end
+
