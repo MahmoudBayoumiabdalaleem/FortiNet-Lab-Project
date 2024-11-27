@@ -33,4 +33,21 @@ config firewall policy
         set action accept
     next
 end
+config log setting
+    set status enable
+    set logtraffic all
+    set fortianalyzer enable
+    set fortianalyzer-settings
+        set server "10.0.1.210"
+        set status enable
+    end
+end
+config user radius
+    edit "FortiAuthenticator"
+        set server "10.0.1.150"
+        set secret "<RADIUS-Shared-Secret>"
+        set auth-type pap
+    next
+end
+
 
