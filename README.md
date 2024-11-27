@@ -23,6 +23,6 @@ The network includes:
 - `scripts/`: Python script for generating documentation.
 
 ## How to Use
-1. Clone this repository: `git clone https://github.com/your-username/FortiNet-Lab-Project.git`
+1. Clone this repository: `git clone https://github.com/MahmoudBayoumiabdalaleem/FortiNet-Lab-Project.git`
 2. Follow the lab steps in `docs/Lab_Steps.md`.
 3. Review configurations in `configurations/`.
