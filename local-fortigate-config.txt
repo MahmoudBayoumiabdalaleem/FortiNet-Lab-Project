@@ -1,0 +1,21 @@
+config system interface
+    edit "port1"
+        set ip 10.200.1.1 255.255.255.0
+    next
+    edit "port2"
+        set ip 10.200.2.1 255.255.255.0
+    next
+    edit "port3"
+        set ip 10.0.1.254 255.255.255.0
+    next
+end
+
+config firewall policy
+    edit 1
+        set name "Allow Local to Internet"
+        set srcintf "port3"
+        set dstintf "port1"
+        set action accept
+        set nat enable
+    next
+end
